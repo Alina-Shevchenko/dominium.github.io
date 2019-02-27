@@ -1,2 +1,1 @@
-# dominium.github.io
-Мій перший хостинг
+<a href="https://alina-shevchenko.github.io/dominium.github.io/"></a>
