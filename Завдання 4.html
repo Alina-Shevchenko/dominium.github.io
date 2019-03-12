@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test page</title>
+  <style media="screen">
+    body {
+      margin: 0; /*margin (отступ) добавляет пространство снаружи, между элементом и другими элементами*/
+    }
+    * {
+      box-sizing: border-box; /*Свойство box-sizing позволяет изменить алгоритм таким образом чтобы свойства width и height задавали размеры не контента, а размеры блока.
+      Значение border-box: свойства width и height включают в себя значения полей и границ, но не отступов (margin).*/
+    }
+    .column {
+      font-size: 4rem;
+      color: white;
+      font-weight: bold; /*Синтаксис font-weight yстанавливает насыщенность шрифта.Насыщенность шрифта задаётся с помощью ключевых слов: bold — полужирное начертание, normal — нормальное начертание. Также допустимо использовать условные единицы от 100 до 900. Значения bolder и lighter изменяют жирность относительно насыщенности родителя, соответственно, в большую и меньшую сторону.*/
+      font-family: Helvetica;
+      text-align: center;
+      padding: 1rem; /* padding устанавливает значение полей вокруг содержимого элемента*/
+    }
+    .floats div {
+      overflow: hidden; /*Свойство overflow позволяет управлять содержимым элемента, в том случае, когда содержимое длиннее, чем его контейнер. Применив overflow: hidden мы запретили переполнение любого видимого содержимого.*/
+       /*overflow: auto; если нужно отобразить полосы прокрутки, мы применим overflow: auto, кроме того полосы прокрутки появятся только если содержимое будет переполнено, но до тех пор они останутся скрытыми.*/
+      float: left;
+      width: 30%; /*Фиксируем ширину блока*/
+    }
+    .blocks div{
+      overflow: hidden;
+      display: inline-block;
+      width: 30%;
+      margin-right: -4px; /* Отступ справа */
+      margin-bottom: -4px; /* Отступ снизу */
+    }
+    .flexbox {
+      overflow: hidden;
+      display: flex;
+    }
+    .flexbox div {
+      width: 30%;
+    }
+    .grid {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) 10%; /*Grid-template-columns отвечает за то, как выкладываются колонки грида, оно принимает ряд значений через пробел, определяющих размер каждой колонки; сколько значений указано, столько и будет колонок.*/
+      grid-auto-rows: repeat(1, 100px);
+    }
+  </style>
+</head>
+<body>
+  <section class="floats">
+    <div class="column" style="background-color: #1abc9c">1</div>
+    <div class="column" style="background-color: #2ecc71">2</div>
+    <div class="column" style="background-color: #3498db">3</div>    
+  </section>
+  <section class="blocks">
+    <div class="column" style="background-color: #f39c12">1</div>
+    <div class="column" style="background-color: #d35400">2</div>
+    <div class="column" style="background-color: #c0392b">3</div>
+  </section>
+  <section class="flexbox">
+    <div class="column" style="background-color: #16a085">1</div>
+    <div class="column" style="background-color: #27ae60">2</div>
+    <div class="column" style="background-color: #2980b9">3</div>
+  </section>
+  <section class="grid">
+    <div class="column" style="background-color: #f1c40f">1</div>
+    <div class="column" style="background-color: #e67e22">2</div>
+    <div class="column" style="background-color: #e74c3c">3</div>
+  </section>
+</body>
+</html>
