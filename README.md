@@ -18,7 +18,6 @@
 	</style>
 </head>
 <body>
-	<p class="fig"><img src="IMG_4782.JPG" width="200px"> </p>
 	<h1 class="text">Аліна Шевченко</h1>
 	<h2><a href="Завдання1.html">Завдання 1</a></h2>
 	<h2><a href="Завдання2.html">Завдання 2</a></h2>
